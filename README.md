@@ -1,29 +1,17 @@
 ## Recipe CRUD App
 
-In this project, you will build a Recipe tracking app. The app will allow a user to add new recipes, display a list of recipes and delete a recipe from the list by clicking a delete button. You will also be asked to add styling as provided in the mockup.
-
-![Final Mock Image](mock_images/deliciousfoods-mockup.png)
-
-## Recipe app
-
-This project has starter code you can use for the application. You will need to add handlers and other logic to make this code work.
+In this project, you will build a Recipe tracking app. The app will allow a user to add new recipes, display a list of recipes and delete a recipe from the list by clicking a delete button.
 
 ## Specific Instructions
 
-Find the TODO comments in the code and create the necessary functionality. Below is a list of specific items you will need to complete for this checkpoint.
-
-    App will display a recipe's name, cuisine, photo, ingredients, preparation instructions and action buttons (edit and delete).
-    Create at least one additional component that is used by the RecipeList component.
-    It does not need to match the exact appearance of the mockup, but should be similar and pass the styling tests.
-    Add handlers and other attributes to the starter code as needed.
+App will display a recipe's name, cuisine, photo, ingredients, preparation instructions and action buttons (edit and delete).
+Create at least one additional component that is used by the RecipeList component.
+It does not need to match the exact appearance of the mockup, but should be similar and pass the styling tests.
+Add handlers and other attributes to the starter code as needed.
 
 To create a recipe entry, your app will need to have a form with input fields for the name of the dish, the cuisine it belongs to, and an URL that points to a picture of the dish. Use `<textarea>` for the ingredients and preparation. For the tests to pass, use the following names for your inputs: `<input name="name">`, `<input name="cuisine">`, `<input name="photo">`, `<textarea name="ingredients">` and `<textarea name="preparation">`.
 
-![Create Recipe](mock_images/create-recipe-form-mockup.png)
-
-To read and display the list of recipes use the table structure that we provide in the starter code. Each recipe should display the name, cuisine, photo, ingredients, preparation and a delete button as shown below:
-
-![Recipe List](mock_images/recipeapplist-output-mockup.png)
+To read and display the list of recipes use the table structure that we provide in the starter code. Each recipe should display the name, cuisine, photo, ingredients, preparation and a delete button.
 
 Clicking the delete button should remove the entire row/recipe from the list. For the tests to pass, make sure that the delete button has delete as a name value (name="delete"). e.g. `<button name="delete" onClick={deleteRecipe}>Delete</button>`.
 

@@ -1,38 +1,95 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans|Playfair+Display+SC');
+
 .App {
+  padding: 1em;
+}
+
+label {
+  display: inline-block;
+  width: 100px;
+}
+
+header {
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  text-align: center;
+  font-size: 64px;
+  font-family: 'Playfair Display SC';
+}
+
+img {
+  width: 100%;
+  object-fit: scale-down;
+}
+
+/* typography */
+
+html {
+  font-family: 'helvetica neue', sans-serif;
+}
+
+thead th, tfoot th {
+  font-family: 'Rock Salt';
+}
+
+th {
+  width: 10%;
+  letter-spacing: 2px;
+  padding: 10px;
+}
+
+td {
+  width: 10%;
+  letter-spacing: 1px;
+  overflow-x:hidden;
+  overflow-y:hidden;
+  font-size: 12px;
+  padding: 10px;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* Use an alternate background color for odd numbered child elements to create a sebra pattern background */
+tbody > tr:nth-child(odd) {
+  background-color: #c7f8ff;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+/* table */
+
+table {
+  table-layout: fixed;
+  width: 100%;
+  border-collapse: collapse;
+  overflow:hidden;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+
+  /* Optimize the space used by the input and textarea elements */
+  /* input can overflow the table without setting the width if the column gets too narrow */
+  input {
+    width: 100%;
+  }
+  textarea {
+    width: 80%;
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.content_td p {
+  max-width: 100%;
+  max-height: 100px;
+  overflow-y: auto;
+  text-overflow: ellipsis;
 }
 
-.App-link {
-  color: #61dafb;
+/* Column Size for thead */
+
+/* :nth-child(n+4):nth-child(-n+5) selects the 4th through the 5th child elements */
+th:nth-child(n+4):nth-child(-n+5) {
+  width: 30%;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* Column size for tbody */
+
+td:nth-child(n+4):nth-child(-n+5) {
+  width: 30%;
 }

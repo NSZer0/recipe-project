@@ -38,6 +38,7 @@ function RecipeCreate({ createRecipe }) {
   };
 
   // Render the RecipeCreate component
+  // CHANGED: Replaced onChange with onKeyUp because onChange event firing is unreliable when pasting in text
   return (
     <form name="create" onSubmit={handleFormSubmit}>
       <table>
@@ -50,7 +51,7 @@ function RecipeCreate({ createRecipe }) {
                 type="text"
                 placeholder="Name"
                 required={true}
-                onChange={handleInputChange}
+                onKeyUp={handleInputChange}
               />
             </td>
             <td>
@@ -60,7 +61,7 @@ function RecipeCreate({ createRecipe }) {
                 type="text"
                 placeholder="Cuisine"
                 required={true}
-                onChange={handleInputChange}
+                onKeyUp={handleInputChange}
               />
             </td>
             <td>
@@ -69,7 +70,7 @@ function RecipeCreate({ createRecipe }) {
                 name="photo"
                 type="url"
                 placeholder="URL"
-                onChange={handleInputChange}
+                onKeyUp={handleInputChange}
               />
             </td>
             <td>
@@ -79,7 +80,7 @@ function RecipeCreate({ createRecipe }) {
                 placeholder="Ingredients"
                 rows={2}
                 required={true}
-                onChange={handleInputChange}
+                onKeyUp={handleInputChange}
               />
             </td>
             <td>
@@ -89,7 +90,7 @@ function RecipeCreate({ createRecipe }) {
                 placeholder="Preparation"
                 rows={2}
                 required={true}
-                onChange={handleInputChange}
+                onKeyUp={handleInputChange}
               />
             </td>
             <td>
